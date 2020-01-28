@@ -2,9 +2,19 @@
     background-color: red;
 }
 #h1 {
-    font-size: 200px; 
+   
     color: blue;
 }
 .h2 {
     color: brown;
+}
+
+@media (min-width: 320px) and (max-width: 720px) {
+    #div1 {
+        background-color: blue;
+    }
+    #h1 {
+       
+        color: red;
+    }
 }
