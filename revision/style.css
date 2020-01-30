@@ -1,0 +1,56 @@
+* {
+
+    font-size: 2rem;
+
+}
+h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    color: brown;
+    font-size: 90px;
+    font-weight: bolder;
+    text-align: center;
+
+    background-color: cornflowerblue;
+
+    border-width: 2px;
+    border-color: black;
+    border-style: solid;
+    border-radius: 25px;
+
+
+}
+
+.mainPage {
+    background-image: url(../images/maxresdefault.jpg);
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-size: cover;
+    
+
+}
+body {
+ 
+
+
+}
+
+
+p {
+    
+    width: 50%;
+    max-width: 80%;
+    height: 50%;
+    background-color: white;
+    height: 200px;
+    float: right;
+}
+
+#myImg {
+  float: left;
+}
+
+ul {
+    background-color: white;
+    display: none;
+}
+   
