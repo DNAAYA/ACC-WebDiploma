@@ -1,155 +1,84 @@
-var name = 'Mahmoud';
-console.log(name);
-var number = 24;
-console.log(number);
-var number1 = 2;
-var number2 = 2;
-console.log(number1 == number2);    
-console.log('my name is ' , name);  
-
-var name, age, job;
-name = 'Ahmed';
-age = 22;
-job = 'teacher';
-console.log(name , age , job);
-var noValue;
-
-console.log(noValue);
-
-var testNull = null; 
-console.log(testNull);
-
-console.log(typeof name); 
-console.log(typeof number);
-console.log ( typeof noValue);
-console.log(typeof testNull);
-
-var x = 2;
-x += 10;
-x -= 5;
-
- x++;
- x--;
- 
- // 1 - and =  &&
- // 2 - or = ||
- // 3 - not = ! 
-
- var a = 5; 
- var b = 6; 
- console.log( a > 10 && b < 10);
- console.log( a > 10 || b <10);
- console.log( a == b);
- console.log(!(a == b));
-
- var firstName = 'abdo'; 
- var age = 19; 
- if (age < 19 ) {
-     console.log(firstName, 'is too young')
- } 
-  else if ( age === 19 ) {  
-      console.log(firstName, 'young man')
-  } 
-
-    else { 
-         console.log(firstName, 'is old enough')
-    };
-
-
-switch (true) {
-    case age < 19: 
-    console.log(firstName, 'is too young');
-    break;
-    case age === 19:
-    console.log(firstName, 'young man');
-    break;
-    default: 
-    console.log(firstName, 'is old enough');
-};
-
-var job = 'teacher';
-switch (job) {
-    case 'teacher': 
-    console.log('teaches kids how to code.');
-    break;
-    case 'designer':
-    console.log('designs beautiful websites.');
-    break;
-    default:
-    console.log('do somthing else')
-}
-
-// ternary
-age < 20 ? console.log("too young") : console.log("old");
-
-if (age < 20) {
-    console.log("too young");
-}
-else {
-    console.log("old");
+function calcuteAge (num) {
+    return 2020-num
 }
 
 
-/*****************************
-* CODING CHALLENGE 1
-*/
+ function retirment1 (firstName, birthYear) {
+    //console.log('retirment birthyear',birthYear);
+    var age = calcuteAge(birthYear)
+    var retirmentAge = 60 - age;
 
-/*
-Mark and John are trying to compare their BMI (Body Mass Index), 
-which is calculated using 
-the formula: BMI = mass / height^2 = mass / (height * height). (mass in kg and height in meter).
+    if (retirmentAge > 0) {
+        console.log(firstName + ' retires in ' + retirmentAge + ' years')
+    } else {
+        console.log('Already retired')
+    }
+} 
 
-1. Store Mark's and John's mass and height in variables
-2. Calculate both their BMIs
-3. Create a boolean variable containing information about whether Mark has a higher
- BMI than John.
-4. Print a string to the console containing the variable from step 3. (Something like "Is Mark's BMI higher than John's? true"). 
+retirment1('sara', 1993)
+retirment1('nada',1998);
 
-GOOD LUCK 😀
-*/
-
-
-var massMark = 78; // kg
-var heightMark = 1.69; // meters
-
-var massJohn = 92;
-var heightJohn = 1.95;
-
-var BMIMark = massMark / (heightMark * heightMark);
-var BMIJohn = massJohn / (heightJohn * heightJohn);
-console.log(BMIMark, BMIJohn);
-
-var markHigherBMI = BMIMark > BMIJohn;
-console.log('Is Mark\'s BMI higher than John\'s? ' + markHigherBMI);
-
-
-/*****************************
-* CODING CHALLENGE 2
-*/
-
-/*
-John and Mike both play basketball in different teams. 
-In the latest 3 games, John's team scored 89, 120 and 103 points, 
-while Mike's team scored 116, 94 and 123 points.
-
-1. Calculate the average score for each team
-2. Decide which teams wins in average (highest average score), 
-and print the winner to the console. Also include the average score in the output. (if statment)
-
-GOOD LUCK 😀
-*/
-
-
-
-var scoreJohn = (189 + 120 + 103) / 3;
-var scoreMike = (129 + 94 + 123) / 3;
-
-console.log(scoreJohn, scoreMike);
-
-if (scoreJohn > scoreMike) {
-    console.log('John\'s team wins with ' + scoreJohn + ' points');
-} else if (scoreMike > scoreJohn) {
-    console.log('Mike\'s team wins with ' + scoreMike + ' points');
-} else {
-    console.log('There is a draw');
+function getName (firstName) {
+    return firstName
 }
+
+function welcome (name) {
+    var firstName = getName(name);
+    console.log('Hello ' + firstName)
+} 
+
+welcome('sara')
+
+
+var retirment2 = function(firstName, birthYear) {
+    var age = calcuteAge(birthYear)
+    var retirmentAge = 60 - age;
+
+    if (retirmentAge > 0) {
+        console.log(firstName + ' retires in ' + retirmentAge + ' years')
+    } else {
+        console.log('Already retired')
+    }
+}
+
+retirment2('sara', 1993)
+
+var names = ['sara','abdo','nehal'];
+var years = new Array(1990,1997,2000);
+
+console.log(names)
+console.log(names[0])
+console.log(names.length)
+
+//array mutation
+names[0] = 'nada'
+console.log(names)
+
+names[names.length] = 'boody'
+names[names.length] = 'ghada'
+console.log(names)
+
+names.unshift(2000); //add first
+names.push(1997); //add last
+names.pop(); // remove last
+names.shift(); // remove first
+console.log(names.indexOf('nehal'))
+console.log(names);
+
+
+var abdo = {
+    firstName: 'abd elrahman',
+    lastName: 'mahmoud',
+    age: 26,
+    email: 'boody@gmail.com',
+    pass: 123456,
+    calcAge: function() {
+        var birthYear =  2020 - this.age
+        return birthYear
+    }
+}
+
+console.log(abdo);
+console.log(abdo.firstName);
+console.log(abdo.calcAge());
+
