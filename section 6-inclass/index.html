@@ -10,6 +10,16 @@
             <input type="text" id="input">
             <button id="button"> ADD </button>
             <p id="par"></p>
-        <script src="Advanced.js"></script>
+        <!-- <script src="Advanced2.js"></script> -->
+
+        <script>
+            function sumNumber (num1) {
+                return function(num2) {
+                    console.log(num1 + num2)
+                }
+            }
+
+            sumNumber(2)(5)
+        </script>
     </body>
 </html>
