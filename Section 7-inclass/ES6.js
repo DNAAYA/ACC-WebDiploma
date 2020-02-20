@@ -1,4 +1,4 @@
-// variables 
+/* // variables 
 
 var a = 'john';
 const b = 'miller';
@@ -123,3 +123,97 @@ function User2 (firstName = 'abdo', yearOfBirth = 1993, lastName = 'mohamed', na
 }
 var abdo2 = new User2()
 console.log(abdo2)
+
+
+// Maps
+const question = new Map();
+question.set('question', 'What is the official name of the latest major JavaScript version?')
+question.set(1, 'ES5');
+question.set(2, 'ES6');
+question.set(3, 'ES7');
+question.set(4,'ES8');
+question.set('correct', 1);
+question.set(true, 'Correct Answer');
+question.set(false, 'Wrong Answer')
+
+
+//question.clear()
+//question.delete(4)
+//console.log(question.get(1))
+//console.log(question.has(3))
+//console.log(question)
+
+//question.forEach((value,key)=> console.log(`this is the key ${key}, and this is its value ${value}`))
+
+var answer = parseInt(prompt('Write your answer'))
+console.log(question.get(answer === question.get('correct'))) */
+
+//Classes
+
+/* class Person {
+    constructor(name , yearOfBirth, job){
+        this.name = name;
+        this.yearOfBirth = yearOfBirth;
+        this.job = job;
+    }
+
+    static calcAge(yearOfBirth) {
+        var age = new Date().getFullYear() - yearOfBirth;
+        console.log(age);
+    }
+
+    static greeting() {
+        console.log('Hello World')
+    }
+}
+
+var abdo = new Person('abdo',1993,'teacher');
+console.log(abdo)
+Person.calcAge(abdo.yearOfBirth)
+Person.greeting()
+
+// subClass
+class Athlete extends Person {
+    constructor(name,yearOfBirth,job,medals) {
+        super(name,yearOfBirth,job)
+        this.medals = medals;
+    }
+}
+
+var athlete = new Athlete('abdo',1993,'swimmer',5)
+console.log(athlete)
+Athlete.calcAge(1990) */
+
+//Async Simulation
+
+var second = () => {
+    setTimeout(()=>{
+        console.log('Async')
+    },3000)
+}
+
+var first = ()=> {
+    console.log('first line')
+    second()
+    console.log('third line')
+}
+
+//first()
+
+function getRecipe(){
+    setTimeout(()=>{
+        var recipeID = [1,2,3,4];
+        console.log(recipeID);
+
+        setTimeout(id => {
+            var recipe ={tilte: 'pizza', publisher: 'menna'};
+            console.log(`${id}: ${recipe.tilte}`)
+
+            setTimeout(publisher => {
+                console.log(publisher)
+            },2000,recipe.publisher)
+        },2000,recipeID[2])
+    },2000)
+}
+
+getRecipe();
