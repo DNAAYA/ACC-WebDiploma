@@ -1,4 +1,4 @@
-/* // variables 
+// variables 
 
 var a = 'john';
 const b = 'miller';
@@ -146,11 +146,11 @@ question.set(false, 'Wrong Answer')
 //question.forEach((value,key)=> console.log(`this is the key ${key}, and this is its value ${value}`))
 
 var answer = parseInt(prompt('Write your answer'))
-console.log(question.get(answer === question.get('correct'))) */
+console.log(question.get(answer === question.get('correct'))) 
 
 //Classes
 
-/* class Person {
+class Person {
     constructor(name , yearOfBirth, job){
         this.name = name;
         this.yearOfBirth = yearOfBirth;
@@ -182,7 +182,7 @@ class Athlete extends Person {
 
 var athlete = new Athlete('abdo',1993,'swimmer',5)
 console.log(athlete)
-Athlete.calcAge(1990) */
+Athlete.calcAge(1990) 
 
 //Async Simulation
 
