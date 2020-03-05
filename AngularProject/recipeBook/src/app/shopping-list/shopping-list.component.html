@@ -1,0 +1,17 @@
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-xs-10">
+          <app-shopping-edit></app-shopping-edit>
+          <hr>
+          <ul class="list-group">
+            <div
+              class="list-group-item"
+              *ngFor="let ingredient of ingredients"
+            >
+              {{ingredient.name}} ({{ingredient.amount}})
+          </div>
+          </ul>
+        </div>
+      </div>
+    </div>
+      
